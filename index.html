@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Prompt 智能寶庫</title>
+    <title>AI Prompt 智能寶庫 - Dark Mode</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .card-border-top { border-top: 4px solid #6d28d9; }
+        .card-border-top { border-top: 4px solid #8b5cf6; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900 min-h-screen">
+<body class="bg-gray-950 text-gray-100 min-h-screen">
 
     <!-- 頂部 Header -->
     <header class="py-10 text-center">
-        <h1 class="text-3xl font-bold flex items-center justify-center gap-2">
+        <h1 class="text-3xl font-bold flex items-center justify-center gap-2 text-white">
             🚀 AI Prompt 智能寶庫
         </h1>
-        <a href="#" class="text-sm text-gray-500 mt-2 block hover:underline">
+        <a href="#" class="text-sm text-gray-400 mt-2 block hover:text-blue-400 transition">
             📄 開啟原始資料 Google Sheet
         </a>
     </header>
@@ -26,48 +26,46 @@
         <div class="flex justify-center mb-8">
             <div class="relative w-full max-w-xl">
                 <input type="text" placeholder="🔍 搜尋提示詞..." 
-                    class="w-full px-6 py-3 rounded-full border border-gray-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    class="w-full px-6 py-3 rounded-full bg-gray-900 border border-gray-800 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
             </div>
         </div>
 
         <div class="flex flex-wrap justify-center gap-2 mb-10">
-            <button class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm">全部</button>
-            <button class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm hover:bg-gray-100">內容創作</button>
-            <button class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm hover:bg-gray-100">筆記精煉</button>
-            <button class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm hover:bg-gray-100">程式應用</button>
-            <button class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm hover:bg-gray-100">程式生成</button>
-            <button class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm hover:bg-gray-100">圖片生成</button>
+            <button class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-medium">全部</button>
+            <button class="px-4 py-2 bg-gray-900 border border-gray-800 rounded-full text-sm hover:bg-gray-800 transition">內容創作</button>
+            <button class="px-4 py-2 bg-gray-900 border border-gray-800 rounded-full text-sm hover:bg-gray-800 transition">筆記精煉</button>
+            <button class="px-4 py-2 bg-gray-900 border border-gray-800 rounded-full text-sm hover:bg-gray-800 transition">程式應用</button>
+            <button class="px-4 py-2 bg-gray-900 border border-gray-800 rounded-full text-sm hover:bg-gray-800 transition">程式生成</button>
+            <button class="px-4 py-2 bg-gray-900 border border-gray-800 rounded-full text-sm hover:bg-gray-800 transition">圖片生成</button>
         </div>
 
-        <h2 class="text-xl font-semibold mb-6 flex items-center gap-2">🧠 AI 協思</h2>
+        <h2 class="text-xl font-semibold mb-6 flex items-center gap-2 text-gray-200">🧠 AI 協思</h2>
 
         <!-- 提示詞卡片網格 -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="card-container">
             <!-- 模擬資料卡片 -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-200 card-border-top p-6 flex flex-col justify-between">
+            <div class="bg-gray-900 rounded-xl shadow-lg border border-gray-800 card-border-top p-6 flex flex-col justify-between hover:border-gray-700 transition">
                 <div>
-                    <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-1 rounded">內容創作</span>
-                    <h3 class="font-bold text-lg mt-2 mb-4">意義單詞</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-6">將文章的重點部分，尋找一個代表性英文字母...</p>
+                    <span class="text-xs font-semibold text-blue-400 bg-blue-950 px-2 py-1 rounded">內容創作</span>
+                    <h3 class="font-bold text-lg mt-2 mb-4 text-white">意義單詞</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">將文章的重點部分，尋找一個代表性英文字母...</p>
                 </div>
-                <button class="w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition">複製 Prompt</button>
+                <button class="w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-500 transition">複製 Prompt</button>
             </div>
             
-            <div class="bg-white rounded-xl shadow-sm border border-gray-200 card-border-top p-6 flex flex-col justify-between">
+            <div class="bg-gray-900 rounded-xl shadow-lg border border-gray-800 card-border-top p-6 flex flex-col justify-between hover:border-gray-700 transition">
                 <div>
-                    <span class="text-xs font-semibold text-purple-600 bg-purple-50 px-2 py-1 rounded">筆記精煉</span>
-                    <h3 class="font-bold text-lg mt-2 mb-4">書籍精煉</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-6">請對 @[檔名] 啟動【終極煉金管線】，一次執行四步驟整合...</p>
+                    <span class="text-xs font-semibold text-purple-400 bg-purple-950 px-2 py-1 rounded">筆記精煉</span>
+                    <h3 class="font-bold text-lg mt-2 mb-4 text-white">書籍精煉</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">請對 @[檔名] 啟動【終極煉金管線】，一次執行四步驟整合...</p>
                 </div>
-                <button class="w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition">複製 Prompt</button>
+                <button class="w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-500 transition">複製 Prompt</button>
             </div>
         </div>
     </main>
 
     <script>
-        // 這裡可以加入讀取 Google Sheet JSON 的邏輯
-        // 例如使用 fetch 獲取 CSV 或 JSON 並動態產生卡片
-        console.log("介面已載入，準備載入 Google Sheet 資料...");
+        console.log("深色介面已載入。");
     </script>
 </body>
 </html>
